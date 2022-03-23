@@ -1,28 +1,18 @@
+.text {
+  font-size: 30px;
+  text-decoration: bold;
+}
 
-#crcl {
-    width: 100px;
-    height: 100px;
-    background: rgb(255, 192, 203);
-    border-radius: 50%
-  }
+#sq1, #sq2 {
+  height: 100px;
+  width: 200px;
+  cursor: pointer;
+}
 
-  #crcl2 {
-    width: 100px;
-    height: 100px;
-    background: rgb(255, 192, 203);
-    border-radius: 50%
-  }
+#sq2 {
+  margin-top: 3px;
+}
 
-  #crcl3 {
-    width: 100px;
-    height: 100px;
-    background: rgb(250, 179, 203);
-    border-radius: 50%
-  }
-
-  #crcl4 {
-    width: 100px;
-    height: 100px;
-    background: rgb(136, 95, 101);
-    border-radius: 50%
-  }
+#results {
+    font-size: 30px;
+}
