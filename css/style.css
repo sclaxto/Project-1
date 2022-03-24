@@ -3,16 +3,16 @@
   text-decoration: bold;
 }
 
-#sq1, #sq2 {
+#sect1, #sect2 {
   height: 100px;
   width: 200px;
   cursor: pointer;
 }
 
-#sq2 {
+#sect2 {
   margin-top: 3px;
 }
 
 #results {
-    font-size: 30px;
+    font-size: 25px;
 }
