@@ -4,6 +4,26 @@ let score = 0;
 let sections = ['#sect1', '#sect2'];
 let userSelection;
 const wrongAnswers = 'null'
+let randomColorWord = randomColors()
+let randomColorText = randomColors()
+
+
+//selectors and event handlers//
+let s1 = document.querySelector('#sect1')
+s1.style.background = `${randomColors()}`;
+s1.onclick =``
+let s2 = document.querySelector('#sect2')
+s2.style.background = `${randomColors()}`;
+let colorSet =  document.querySelector('.text')
+
+//init //
+function init() {
+    setColors();
+    render();
+    playerSelects();
+    randomColors();
+}
+
 //functions//
 
  function randomColors () {
@@ -13,22 +33,7 @@ let random = colors[Math.floor(Math.random() * colors.length)];
 }
 
 
-//text color random display selectors//
-
-
-//square selectors//
-let s1 = document.querySelector('#sect1')
-s1.style.background = `${randomColors()}`;
-s1.onclick =``
-let s2 = document.querySelector('#sect2')
-s2.style.background = `${randomColors()}`;
-
-//onclick for squares//
-//setting color opposites and equals//
-function setColors(){
-    let colorSet =  document.querySelector('.text')
-    let randomColorWord = randomColors()
-    let randomColorText = randomColors()
+function setColors(){ 
     colorSet.innerHTML = randomColorWord
     while (randomColorWord === randomColorText) {
         randomColorText = randomColors()
@@ -41,47 +46,43 @@ function setColors(){
     }else{
         document.querySelector('#sect1').style.background = randomColorWord
     }
-
-//gameplay// 
-function init() {
+    return randomColorWord
     
-    if (playerSelects === randomColorWord)
-    return wrongAnswers
 }
 
-
-
-//setting onclick for squares//
 function playerSelects () {
 let squares = document.querySelectorAll('.squares') 
 squares.forEach(square => {
     square.addEventListener('click', function onclick(e) {
-        userSelection = e.target.innerHTML;
-        console.log(e)
+        userSelection = e.target.style.background;
+        console.log(userSelection)
+        if(userSelection === randomColorText){
+         score++
+         let rightSelection = document.querySelector('#results');
+         rightSelection.innerHTML = score;
+         
+        }
+        console.log(score)
+        randomColorWord = randomColors()
+         setColors()
         return squares 
+
     })
+
 })
+}
 
 
-
-function renderScores() {
+function render() {
 let rightSelection = document.querySelector('#results');
 let wrongSelection = wrongAnswers;
 rightSelection.innerHTML = score;
 if( playerSelects === randomColorText ){ 
     document.querySelector('#results').innerHTML = score+=1;
-//   let i = 0; i<score.value; i++ 
 }else{
 (playerSelects === wrongSelection)
 return 0;
-
-
 }
 }
-renderScores();
 
-}
-playerSelects();
-
-}
-setColors();
+init();
