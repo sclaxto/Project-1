@@ -28,7 +28,6 @@ function init() {
 
  function randomColors () {
 let random = colors[Math.floor(Math.random() * colors.length)];
-  console.log(random);
   return random
 }
 
@@ -55,14 +54,12 @@ let squares = document.querySelectorAll('.squares')
 squares.forEach(square => {
     square.addEventListener('click', function onclick(e) {
         userSelection = e.target.style.background;
-        console.log(userSelection)
         if(userSelection === randomColorText){
          score++
          let rightSelection = document.querySelector('#results');
          rightSelection.innerHTML = score;
          
         }
-        console.log(score)
         randomColorWord = randomColors()
          setColors()
         return squares 
@@ -74,10 +71,10 @@ squares.forEach(square => {
 
 
 function render() {
-let rightSelection = document.querySelector('#results');
-let wrongSelection = wrongAnswers;
-rightSelection.innerHTML = score;
-if( playerSelects === randomColorText ){ 
+    let rightSelection = document.querySelector('#results');
+    let wrongSelection = wrongAnswers;
+    rightSelection.innerHTML = score;
+    if( playerSelects === randomColorText ){ 
     document.querySelector('#results').innerHTML = score+=1;
 }else{
 (playerSelects === wrongSelection)
