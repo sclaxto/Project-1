@@ -7,7 +7,7 @@
 
 #### Getting Started 
 ### How to play
-(https://sclaxto.github.io/Project-1/)
+[Website](https://sclaxto.github.io/Project-1/)
 There are no strict rules to the game.  All you need to do is, click the box that matches the color of the text. 
 
 ### Technologies Used
