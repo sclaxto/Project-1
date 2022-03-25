@@ -1,13 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Lato:wght@300&family=Modak&family=Roboto:wght@100&family=Zilla+Slab+Highlight:wght@700&display=swap');
+*
+{
+  background-color: rgba(26, 22, 16, 0.986);
+  padding: 0px;
+}
 
+head {
+display: grid; 
+  justify-content: space-around;
+  justify-items: center;
+  align-items: baseline;
+  
 
-h3 {
+}
+
+body {
+  display: grid; 
+  justify-content: space-around;
+  justify-items: center;
+  align-items: baseline;
+}
+
+h1, h3, p {
   text-align: center;
-  font-size: ;
+  color: aliceblue;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: center;   
+  font-family: kulim parks; 
+}
+h1{
+  font-family: zilla slab highlight;
+  font-size: 60px;
+  background-color: rgba(7, 4, 4, 0.253);
+  padding: 30px 45px 15px 45px;
+  height: 80px;
+}
+
+h3{
+  font-family: fontdiner Swanky;
+  font-size: 25px ;
+  padding-bottom: 0px;
+}
+
+p{
+  font-family: lato; 
+
 }
 
 .text {
   font-size: 30px;
   text-decoration: bold;
+  text-align: center;
+  
   
 }
 
@@ -23,4 +73,8 @@ h3 {
 
 #results {
     font-size: 25px;
+}
+
+section{
+  color: rgb(235, 231, 35);
 }
